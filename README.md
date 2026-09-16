@@ -1,6 +1,6 @@
-# Projeto React + Bootstrap Grid
+# Projeto React Props
 
-Este é um projeto simples de demonstração de React utilizando o sistema de Grid do Bootstrap.
+Este é um projeto simples de demonstração de React utilizando o sistema de Grid do Bootstrap com Props.
 
 ## Como Executar
 
@@ -10,8 +10,12 @@ Este é um projeto simples de demonstração de React utilizando o sistema de Gr
    ```bash
    npm install
    ```
-4. Execute o servidor de desenvolvimento:
+4. Execute o build do Vite:
    ```bash
-   npm run dev
+   npm run build
    ```
-5. Abra o link informado no terminal (geralmente `http://localhost:5173`).
+5. Execute o preview do Vite
+   ```
+   npm run preview
+   ```
+6. Abra o link informado no terminal (geralmente `http://localhost:4173`).
