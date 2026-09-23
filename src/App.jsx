@@ -1,12 +1,14 @@
 import { React, useState } from 'react';
 import TxfNome from './TxfNome';
+import BtnAdicionar from './BtnAdicionar';
 
 function App() {
   const [nome, setNome] = useState('');
+  const [aoClicar, setAoClicar] = useState(0);
   return (
     <div className="bg-light min-vh-100 py-4">
       {/* Container principal para centralizar e dar alinhamento */}
-      <div className="container">
+      <div className="container d-grid gap-3">
         {/* Cabeçalho */}
         <header className="row mb-4">
           <div className="col text-center">
@@ -18,16 +20,32 @@ function App() {
         </header>
 
         <section>
-          <div className="row">
-            <div className="col md-4">
+          <div className="row card p-3">
+            <div className="col md-3">
               <TxfNome
                 valor = { nome }
                 aoMudar = { setNome }
               />
             </div>
-            <div className="col md-4">
+            <div className="col md-3">
               <p className="lead text-secondary">
                 Seu nome: { nome || 'Nenhum nome digitado' }
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div className="row card p-3">
+            <div className="col md-3">
+              <BtnAdicionar
+                aoClicar = { aoClicar }
+                setAoClicar = { setAoClicar }
+              />
+            </div>
+            <div className="col md-3">
+              <p className="lead text-secondary">
+                Cliques: { aoClicar == 10 ? 'Não dá para clicar mais' : aoClicar }
               </p>
             </div>
           </div>
